@@ -1,7 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const path = require('path'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
-  MiniCssExtractPlugin = require('mini-css-extract-plugin');
+  MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+  devMode = process.env.NODE_ENV === 'development';
 
 module.exports = {
   entry: './src/index.js',
@@ -26,7 +27,11 @@ module.exports = {
       },
       {
         test: /\.(sc|sa|c)ss/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.(png|pneg|svg|jpg|jpeg|gif)$/i,
