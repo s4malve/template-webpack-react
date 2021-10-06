@@ -5,18 +5,26 @@
 </div>
 
 <!-- SCRIPTS -->
+## Steps to run this application
 
-## Scripts
-### `npm start`
-Start a developing server at your `localhost:3000`
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
-### `npm run build`
-Build the proyect for production
+```bash
+# Clone this repository
+$ git clone https://github.com/Samalve/repo_name
+
+# Install dependencies
+$ npm install
+
+# Start a developing server at your localhost:3000
+$ npm start
+
+# Build the proyect for production
+$ npm run build
+```
 
 ### Built With
 - [React](https://reactjs.org/)
-- [Styled-components](https://styled-components.com/)
-
 
 ## Acknowledgements
 - [Webpack](https://webpack.js.org/)
